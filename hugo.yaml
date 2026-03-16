@@ -1,0 +1,108 @@
+baseURL: "https://wujunwei928.github.io/"
+languageCode: "zh-cn"
+title: "吴军伟的博客"
+theme: "PaperMod"
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+pagination:
+  pageSize: 10
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+# 导航菜单
+menu:
+  main:
+    - name: 首页
+      url: /
+      weight: 1
+    - name: 文章
+      url: /posts/
+      weight: 2
+    - name: 项目
+      url: /projects/
+      weight: 3
+    - name: 关于
+      url: /about/
+      weight: 4
+    - name: 搜索
+      url: /search/
+      weight: 5
+
+# 站点参数
+params:
+  env: production
+  title: "吴军伟的博客"
+  description: "技术博客 - 分享编程经验与项目作品"
+  keywords: [Blog, Portfolio, 技术, 编程]
+  author: "吴军伟"
+  DateFormat: "2006-01-02"
+  defaultTheme: auto
+  disableThemeToggle: false
+
+  # 首页信息
+  homeInfoParams:
+    Title: "你好，我是吴军伟"
+    Content: >
+      欢迎来到我的技术博客！这里记录着我的编程学习笔记和项目作品。
+
+  # 社交链接
+  socialIcons:
+    - name: github
+      url: "https://github.com/wujunwei928"
+
+  # 搜索功能
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    patternExtent: 32
+    minMatchCharLength: 0
+    limit: 10
+    keys: ["title", "permalink", "summary", "content"]
+
+  # 文章配置
+  showReadingTime: true
+  showShareButtons: true
+  showPostNavLinks: true
+  showBreadCrumbs: true
+  showCodeCopyButtons: true
+  showWordCount: true
+  showRssButtonInSectionTermList: true
+  useHugoToc: true
+  tocopen: true
+
+# 输出格式
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+# RSS 配置
+rss:
+  limit: 20
+
+# 代码高亮
+markup:
+  highlight:
+    anchorLineNos: false
+    codeFences: true
+    guessSyntax: true
+    lineNos: false
+    noClasses: true
+    style: "monokai"
+  goldmark:
+    renderer:
+      unsafe: true
+
+# 隐私配置（GDPR 合规）
+privacy:
+  googleAnalytics:
+    disabled: true
